@@ -5,6 +5,7 @@ import ImageGallery from 'components/ImageGallery';
 import Button from 'components/Button';
 import Loader from 'components/Loader';
 import { data } from 'data/data';
+
 function App() {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
