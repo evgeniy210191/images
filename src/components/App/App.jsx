@@ -24,11 +24,13 @@ function App() {
         setIsItem(false);
         const searchedData = await data(page, requestsItem);
         setTotal(searchedData.total);
+
         if (page !== 1) {
           setImages(prevState => [...prevState, ...searchedData.hits]);
           setIsAlreadyLoad(false);
           return;
         }
+
         setImages(searchedData.hits);
         setIsAlreadyLoad(false);
         setIsItem(searchedData.total !== searchedData.hits.length);
